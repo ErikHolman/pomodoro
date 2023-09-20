@@ -18,12 +18,19 @@ def pom_cycles (count: str, work_len:str, break_len:str):
       if cycles == 0:
         print("Last cycle before a longer break.\n")
       else:
-        print("Cycles remianing: "+ str(cycles + 1) + " out of " + str(total_cycles) + "\n")
+        print("Cycles remianing: "+ str(cycles + 1) + " out of " + str(total_cycles))
+        print("Working segments are: " + str(work_minutes) + " minutes and " + str(work_seconds)+ " seconds.")
+        print("Break segments are: " + str(break_minutes) + " minutes and " + str(break_seconds) +" seconds.\n")
+      print("💻")
       timer.countdown(work_minutes, work_seconds)
       if cycles != 0:
-        input("Work time for this cycle is UP, press ENTER to start a break.\n")
+        input("✅ Work time for this cycle is UP, press ENTER to start a break.")
+        print("\n☕️")
         timer.countdown(break_minutes, break_seconds)
-        input("Coffee break is over, press ENTER to move to the next cycle.\n")
+        input("✅ Coffee break is over, press ENTER to move to the next cycle.")
         os.system("clear")
     break
   print("GOOD WORK! Take a longer break! See you soon. \n")
+  os.system("exit")
+  
+  # todo: this returns to start.py and does not exit gracefully

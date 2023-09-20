@@ -21,9 +21,9 @@ def pom_cycles (count: str, work_len:str, break_len:str):
         print("Cycles remianing: "+ str(cycles + 1) + " out of " + str(total_cycles) + "\n")
       timer.countdown(work_minutes, work_seconds)
       if cycles != 0:
-        input("Press ENTER to start a break.\n")
+        input("Work time for this cycle is UP, press ENTER to start a break.\n")
         timer.countdown(break_minutes, break_seconds)
-        input("Press ENTER to move to the next cycle.\n")
+        input("Coffee break is over, press ENTER to move to the next cycle.\n")
         os.system("clear")
     break
   print("GOOD WORK! Take a longer break! See you soon. \n")

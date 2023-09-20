@@ -8,7 +8,7 @@ def countdown (m:str, s:str):
   while total_seconds > 0:
     timer = datetime.timedelta(seconds=total_seconds)
 
-    print(timer)
+    print(timer, end="\r", flush=True)
 
     time.sleep(1)
 

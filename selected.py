@@ -3,8 +3,8 @@ import cycles
 import os
 
 # modify these for testing [min, sec]
-standard_work_unit = [0,6]
-standard_break_unit = [0,3]
+standard_work_unit = [25,0]
+standard_break_unit = [5,0]
 
 def pomodoro_selection (user_pick):
 

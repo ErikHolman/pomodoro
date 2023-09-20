@@ -19,8 +19,8 @@ def pom_cycles (count: str, work_len:str, break_len:str):
         print("Last cycle before a longer break.\n")
       else:
         print("Cycles remianing: "+ str(cycles + 1) + " out of " + str(total_cycles))
-        print("Working segments are: " + str(work_minutes) + " minutes and " + str(work_seconds)+ " seconds.")
-        print("Break segments are: " + str(break_minutes) + " minutes and " + str(break_seconds) +" seconds.\n")
+        print("Working segments are set as: " + str(work_minutes) + " minutes and " + str(work_seconds)+ " seconds.")
+        print("Break segments are set as: " + str(break_minutes) + " minutes and " + str(break_seconds) +" seconds.\n")
       print("💻")
       timer.countdown(work_minutes, work_seconds)
       if cycles != 0:

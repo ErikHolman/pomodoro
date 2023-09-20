@@ -56,12 +56,13 @@ def pomodoro_selection (user_pick):
       print("Working lengths (mm:ss): "+str(user_work_min)+":"+str(user_work_sec))
       print("Break lengths (mm:ss): "+str(user_break_min)+":"+str(user_break_sec)+"\n")
     
-    user_gmo_start = input("You gonna eat that Pomodoro? [Y]es or [N]o\n")
+    user_gmo_start = input("\nYou ready to eat this Pomodoro? [Y]es or [N]o ")
     
     if user_gmo_start == "Y" or "y":
-      print("\n")
+      os.system("clear")
       cycles.pom_cycles(user_cycle, [user_work_min, user_work_sec], [user_break_min, user_break_sec])
     else:
+      # todo: Currently we can't get here?
       os.system("clear")
       print("ok, let's try this again\n")
       user_cycle, user_work_min, user_work_sec, user_break_min, user_break_sec = gmo_pom()

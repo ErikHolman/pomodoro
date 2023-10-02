@@ -10,7 +10,7 @@ import time
 #    - "Ripe Pomodoro"
 #      + User defines between 1 and 4 cycles
 #    - "GMO Pomodoro"
-#      + User defines mins and secs
+#      + User defines number of cycles, working  mins/secs, and break mins/secs
 # Selection is evaluated and leads to selected.py
 
 print("Good call starting a timer for your work. You'll get so much shit done yo! How do you want your Pomodoro prepared?\n")
@@ -19,15 +19,13 @@ print("[1] - Fresh Pomodoro")
 print("[2] - Ripeish Pomodoro")
 print("[3] - GMO Pomodoro\n")
 
-
-print('Pick a number (1-3)')
-
 attempts = 3
 
 for retry in range(attempts):
-  pomodoro_choice = int(input("> "))
+  pomodoro_choice = int(input("Pick a number (1-3): "))
   if (int(pomodoro_choice) >= 1 and int(pomodoro_choice) <= 3) or int(pomodoro_choice) == 69:
     selected.pomodoro_selection(pomodoro_choice)
+  os.system("clear")  
   attempts -= 1
   if attempts != 1:
     print("Nah blood, I didn't code for that... Try Again. You've got "+str(attempts)+" tries left.")

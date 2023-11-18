@@ -31,13 +31,13 @@ pomodoro_choice: int
 
 while(True):
   try:
-    pomodoro_choice = input("Pick a number (1-3): ")
+    pomodoro_choice = int(input("Pick a number (1-3): "))
     if (pomodoro_choice >= 1 and pomodoro_choice <= 3) or pomodoro_choice == 69:
       selected.pomodoro_selection(pomodoro_choice)
     break
   except TypeError:
-    print('type error')
+    # print('type error')
     pomodoro_choice = input("So, we're looking for a number. 1, 2, 3, or a different 'special' number. Try agin: ")
   except ValueError:
-    print('value error')
+    # print('value error')
     pomodoro_choice = input("Hmm, that does not look like a '1', '2', '3', or a different 'special' number. Try agin: ")

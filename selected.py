@@ -28,7 +28,7 @@ def pomodoro_selection (user_pick):
 
   if int(user_pick == 3):
     os.system("clear")
-    print("You've picked a GMO Pomodoro. How many cycles are do you want?\n")
+    print("You've picked a GMO Pomodoro. Let us SCIENCE!\n")
 
     def gmo_pom ():
       cycle = ""
@@ -39,11 +39,12 @@ def pomodoro_selection (user_pick):
 
       print (cycle, work_min, work_sec, break_min, break_sec)
       
-      cycle = int(input("Cycle count: "))
-      work_min = int(input("Define working length in Minutes: "))
-      work_sec = int(input("Define working length in Seconds: "))
-      break_min = int(input("Define break length in Minutes: "))
-      break_sec = int(input("Define break length in Seconds: "))
+      cycle = int(input("How many cycles would you like: "))
+      print('Ok, now we will define the length for work(s) and length for break(s). Minutes first, then seconds.')
+      work_min = int(input("Define working length in whole Minutes: "))
+      work_sec = int(input("Define working length in whole Seconds: "))
+      break_min = int(input("Define break length in whole Minutes: "))
+      break_sec = int(input("Define break length in whole Seconds: "))
 
       return cycle, work_min, work_sec, break_min, break_sec
 
@@ -69,6 +70,7 @@ def pomodoro_selection (user_pick):
       show_stats()
 
   if int(user_pick == 69):
-    print("heh... nice")
+    print("heh ... nice")
     time.sleep(2)
+    print("Ok, come back when you're ready to be serious.")
     os.system("exit")
